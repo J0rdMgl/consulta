@@ -46,7 +46,8 @@ document.getElementById('consultaForm').addEventListener('submit', function(even
         'terronescarranzajasmin@gmail.com': { fechaInicio: new Date('2024-08-25').toISOString(), diasPlan: 30 },
         'ml4710256@gmail.com': { fechaInicio: new Date('2024-08-11').toISOString(), diasPlan: 180 },
         'aroninga151@gmail.com': { fechaInicio: new Date('2024-07-05').toISOString(), diasPlan: 365 },
-        'mjerson.2308@gmail.com': { fechaInicio: new Date('2024-08-31').toISOString(), diasPlan: 93 }
+        'mjerson.2308@gmail.com': { fechaInicio: new Date('2024-08-31').toISOString(), diasPlan: 93 },
+        '+584248296284': { fechaInicio: new Date('2024-08-31').toISOString(), diasPlan: 31 },
     };
 
     // Añadir usuarios predefinidos a los usuarios actuales
