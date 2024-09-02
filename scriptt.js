@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             'martinalvarezmunoz19@gmail.com': [
                 { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-08-31').toISOString(), diasPlan: 31 }
+            ],
+            'karlavertiz.02@gmail.com': [
+                { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-09-02').toISOString(), diasPlan: 183 }
             ]
         };
 
