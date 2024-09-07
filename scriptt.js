@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const resultado = document.getElementById('resultado');
         const modal = document.getElementById('modal'); 
         const fechaExpiracionTexto = document.getElementById('fechaExpiracion');
-        
+        const notificationDot = document.getElementById('notification-dot');
+
         // Datos de usuarios predefinidos
         const usuariosPredefinidos = {
             'zavaletavillanueva062004@gmail.com': [
@@ -42,6 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
             '+584248296284': [
                 { producto: 'Chat GPT 4', fechaInicio: new Date('2024-08-31').toISOString(), diasPlan: 31 }
             ],
+            '953904785': [ // Cliente con licencia permanente
+                { producto: 'CorelDRAW Graphics Suite', fechaInicio: new Date('2024-01-01').toISOString(), diasPlan: 'Permanente' }
+            ],
             'martinalvarezmunoz19@gmail.com': [
                 { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-08-31').toISOString(), diasPlan: 31 }
             ],
@@ -55,19 +59,25 @@ document.addEventListener('DOMContentLoaded', () => {
             let tieneSuscripcionesActivas = false;
 
             usuariosPredefinidos[identificador].forEach(suscripcion => {
-                const fechaInicio = new Date(suscripcion.fechaInicio);
-                const diasPlan = suscripcion.diasPlan;
-                const fechaActual = new Date();
-                const diferenciaTiempo = fechaActual - fechaInicio;
-                const diasRestantes = diasPlan - Math.floor(diferenciaTiempo / (1000 * 60 * 60 * 24));
-
-                if (diasRestantes > 0) {
-                    mensajeResultado += `Producto: ${suscripcion.producto} - Te quedan ${diasRestantes} días de tu plan.\n`;
+                if (suscripcion.diasPlan === 'Permanente') {
+                    mensajeResultado += `Producto: ${suscripcion.producto} - Tu licencia es permanente y no tiene fecha de vencimiento.\n`;
                     tieneSuscripcionesActivas = true;
                 } else {
-                    mensajeResultado += `Producto: ${suscripcion.producto} - Tu plan ha expirado.\n`;
-                    fechaExpiracionTexto.innerText = fechaInicio.toISOString().split('T')[0];
-                    modal.style.display = 'block';
+                    const fechaInicio = new Date(suscripcion.fechaInicio);
+                    const diasPlan = suscripcion.diasPlan;
+                    const fechaActual = new Date();
+                    const diferenciaTiempo = fechaActual - fechaInicio;
+                    const diasRestantes = diasPlan - Math.floor(diferenciaTiempo / (1000 * 60 * 60 * 24));
+
+                    if (diasRestantes > 0) {
+                        mensajeResultado += `Producto: ${suscripcion.producto} - Te quedan ${diasRestantes} días de tu plan.\n`;
+                        tieneSuscripcionesActivas = true;
+                    } else {
+                        mensajeResultado += `Producto: ${suscripcion.producto} - Tu plan ha expirado.\n`;
+                        fechaExpiracionTexto.innerText = fechaInicio.toISOString().split('T')[0];
+                        modal.style.display = 'block';
+                        notificationDot.style.display = 'block'; // Mostrar notificación en la campana
+                    }
                 }
             });
 

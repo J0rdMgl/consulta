@@ -156,3 +156,42 @@ button:hover {
 #renewButton img {
     margin-right: 10px;
 }
+
+/* Estilos adicionales para el Boton de Catalogo */
+.button-link {
+    display: inline-block;
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #007BFF; /* color azul del botón */
+    text-align: center;
+    text-decoration: none; /* elimina el subrayado del enlace */
+    cursor: pointer; /* hace que el cursor sea una mano al pasar sobre el botón */
+    transition: background-color 0.3s ease;
+}
+/* Estilos adicionales para la campana de notificaciones */
+.bell {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: white; /* Cambia el color según tu diseño */
+    cursor: pointer;
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
+
+.notification-dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+    display: none; /* Oculto por defecto */
+}
