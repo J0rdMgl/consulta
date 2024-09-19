@@ -51,8 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             'karlavertiz.02@gmail.com': [
                 { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-09-02').toISOString(), diasPlan: 183 }
+            ],
+            'ruth.tj.viru@gmail.com': [
+                { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-09-18').toISOString(), diasPlan: 365 }
+            ],
+            'jmotinianor@unitru.edu.pe': [
+                { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-09-15').toISOString(), diasPlan: 122 }
+            ],
+            'anneawn20@gmail.com': [
+            { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-09-17').toISOString(), diasPlan: 182 }
             ]
-        };
+            };
 
         if (usuariosPredefinidos[identificador]) {
             let mensajeResultado = '';
