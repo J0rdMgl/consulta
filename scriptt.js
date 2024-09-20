@@ -60,6 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             'anneawn20@gmail.com': [
             { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-09-17').toISOString(), diasPlan: 182 }
+            ],
+            'jesusedu_96@hotmail.com': [
+            { producto: 'Netflix', fechaInicio: new Date('2024-09-19').toISOString(), diasPlan: 31 }
             ]
             };
 
