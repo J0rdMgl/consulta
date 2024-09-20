@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-08-31').toISOString(), diasPlan: 93 }
             ],
             '+584248296284': [
-                { producto: 'Chat GPT 4', fechaInicio: new Date('2024-08-31').toISOString(), diasPlan: 31 }
+                { producto: 'Chat GPT 4', fechaInicio: new Date('2024-09-20').toISOString(), diasPlan: 376 }
             ],
             '953904785': [ // Cliente con licencia permanente
                 { producto: 'CorelDRAW Graphics Suite', fechaInicio: new Date('2024-01-01').toISOString(), diasPlan: 'Permanente' }
