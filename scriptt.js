@@ -61,9 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
             'anneawn20@gmail.com': [
             { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-09-17').toISOString(), diasPlan: 182 }
             ],
-            'jesusedu_96@hotmail.com': [
+            '945754548': [
             { producto: 'Netflix', fechaInicio: new Date('2024-09-19').toISOString(), diasPlan: 31 }
-            ]
+            ],
+            '966228431': [
+                { producto: 'Netflix', fechaInicio: new Date('2024-09-23').toISOString(), diasPlan: 31 }
+                ]
             };
 
         if (usuariosPredefinidos[identificador]) {
