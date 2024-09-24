@@ -28,6 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
             'zavaletavillanueva062004@gmail.com': [
                 { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-08-26').toISOString(), diasPlan: 30 }
             ],
+            'addlco627@gmail.com': [
+                { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-09-13').toISOString(), diasPlan: 183 }
+            ],
+            'oeff2008@gmail.com': [
+                { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-08-28').toISOString(), diasPlan: 365 }
+            ],
             'terronescarranzajasmin@gmail.com': [
                 { producto: 'Canva Pro Edu', fechaInicio: new Date('2024-08-25').toISOString(), diasPlan: 30 }
             ],
