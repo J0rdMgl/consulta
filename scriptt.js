@@ -72,7 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             '966228431': [
                 { producto: 'Netflix', fechaInicio: new Date('2024-09-23').toISOString(), diasPlan: 31 }
-                ]
+            ],
+            '917297705': [
+                { producto: 'Office 365', fechaInicio: new Date('2024-09-24').toISOString(), diasPlan: 365 }
+            ]
             };
 
         if (usuariosPredefinidos[identificador]) {
