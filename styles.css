@@ -1,197 +1,189 @@
+/* Importar la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Estilo general del cuerpo */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('fondo-escritorio-moderno-vector-diseno-azul-geometrico_53876-135923.avif'); /* URL de tu imagen de fondo */
-    background-size: cover; /* Ajusta la imagen de fondo para cubrir toda la pantalla */
-    background-position: center; /* Centra la imagen de fondo */
-    background-repeat: no-repeat; /* No repite la imagen de fondo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    background-image: url('pexels-luis-gomes-166706-546819.jpg'); /* Cambia esto por la ruta de tu imagen */
+    background-size: cover; /* La imagen cubrirá todo el fondo */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    height: 100vh; /* El fondo cubrirá la altura completa de la ventana */
+    margin: 0; /* Eliminar los márgenes por defecto */
+    font-family: 'Poppins', sans-serif; /* Aplicar la fuente de Google */
 }
 
+/* Estilo para el contenedor del formulario */
 .container {
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra para la caja */
+    max-width: 400px; /* Tamaño máximo de la caja */
+    margin: auto; /* Centrar horizontalmente */
+    margin-top: 100px; /* Separación desde la parte superior */
+    text-align: center; /* Alineación centrada del texto */
 }
 
-h1 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
+/* Estilo moderno para el campo de texto */
+input[type="text"] {
+    width: 90%; /* Ancho completo */
+    padding: 12px; /* Espaciado interno */
+    margin-top: 10px; /* Margen superior */
+    margin-bottom: 10px; /* Margen inferior */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    font-size: 16px; /* Tamaño de la fuente */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Cambios al hacer focus en el campo de texto */
+input[type="text"]:focus {
+    border-color: #007bff; /* Cambiar borde a azul */
+    outline: none; /* Quitar el borde por defecto */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2); /* Añadir sombra azul */
+}
+
+/* Estilo del label (etiqueta) */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
     color: #333;
 }
 
-input, button {
-    padding: 12px;
-    margin: 10px 0;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
+/* Estilo para el botón del formulario */
 button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #007bff; /* Color azul para el botón */
+    color: white; /* Texto en blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Mostrar la mano al pasar por encima */
+    font-size: 16px; /* Tamaño del texto */
+    width: 100%; /* Ancho completo del botón */
+    margin-top: 10px; /* Espaciado superior */
 }
 
+/* Efecto hover para el botón */
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
 }
 
-.mensaje {
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.1em;
-    display: none;
-}
-
-.success {
-    display: block;
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-.error {
-    display: block;
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-#whatsappButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-color: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1em;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-#whatsappButton:hover {
-    background-color: #128C7E;
-}
-
-#whatsappButton img {
-    margin-right: 10px;
-}
-
-.hidden {
-    display: none;
-}
-
-/* Estilos para la ventana modal */
+/* Estilo para la ventana modal */
 .modal {
-    display: none; /* Oculto por defecto */
-    position: fixed; 
-    z-index: 1; 
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Estilo del contenido dentro de la ventana modal */
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; 
+    background: white;
     padding: 20px;
-    border: 1px solid #888;
+    border-radius: 8px;
     width: 80%;
-    max-width: 400px;
-    border-radius: 10px;
-    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Añadir transform para asegurar el centrado */
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
+/* Estilo del botón de cerrar la ventana modal */
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
+.close:hover {
     color: black;
-    text-decoration: none;
+}
+
+/* Sección de detalles de la suscripción dentro de la ventana modal */
+.subscription-details {
+    text-align: left; /* Alineación a la izquierda */
+    margin-bottom: 20px;
+}
+
+/* Sección de enlaces a redes sociales */
+.social-media-links img {
+    width: 40px; /* Tamaño de los iconos */
+    margin: 0 10px; /* Espaciado entre los iconos */
     cursor: pointer;
 }
 
-#renewButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-color: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1em;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
+.additional-actions {
+    margin-top: 20px; /* Espaciado superior para la sección de acciones */
 }
 
-#renewButton:hover {
-    background-color: #128C7E;
-}
-
-#renewButton img {
-    margin-right: 10px;
-}
-
-/* Estilos adicionales para el Boton de Catalogo */
-.button-link {
+.button {
     display: inline-block;
-    padding: 12px;
-    margin: 10px 0;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 1em;
-    border-radius: 5px;
-    border: none;
+    background-color: #28a745; /* Color verde para los botones de acción */
     color: white;
-    background-color: #007BFF; /* color azul del botón */
-    text-align: center;
-    text-decoration: none; /* elimina el subrayado del enlace */
-    cursor: pointer; /* hace que el cursor sea una mano al pasar sobre el botón */
-    transition: background-color 0.3s ease;
-}
-/* Estilos adicionales para la campana de notificaciones */
-.bell {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 24px;
-    color: white; /* Cambia el color según tu diseño */
-    cursor: pointer;
-    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px; /* Espaciado entre botones */
 }
 
-.notification-dot {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 12px;
-    height: 12px;
-    background-color: red;
-    border-radius: 50%;
-    display: none; /* Oculto por defecto */
+.button:hover {
+    background-color: #218838; /* Color más oscuro al pasar el mouse */
+}
+/* Media Queries para adaptar la modal en dispositivos móviles */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%; /* Aumenta el ancho en dispositivos pequeños */
+        padding: 15px; /* Ajusta el padding para más espacio */
+    }
+
+    .social-media-links img {
+        width: 30px; /* Reduce el tamaño de los iconos */
+        margin: 0 8px; /* Ajusta el espaciado entre los iconos */
+    }
+
+    .button {
+        padding: 8px 16px; /* Reduce el padding para los botones */
+        font-size: 14px; /* Reduce el tamaño de la fuente para los botones */
+    }
+
+    /* Ajustar los detalles de la suscripción para mejor visualización */
+    .subscription-details {
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+
+    /* Ajustar el tamaño y posición del botón de cerrar */
+    .close {
+        font-size: 24px; /* Reduce el tamaño del ícono de cerrar */
+    }
+}
+
+/* Asegurarse de que los botones y textos son fácilmente legibles y accesibles */
+input[type="text"], button {
+    font-size: 16px; /* Asegura que el texto es legible */
+    padding: 12px 20px; /* Aumenta el padding para facilitar la interacción */
+}
+
+/* Ajustes para etiquetas y campos de texto */
+label, input[type="text"] {
+    margin-top: 10px; /* Aumenta el margen superior */
+    margin-bottom: 10px; /* Aumenta el margen inferior */
+}
+
+/* Asegurar que el botón es accesible */
+button {
+    min-width: 120px; /* Establece un ancho mínimo para los botones */
 }

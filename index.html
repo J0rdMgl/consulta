@@ -5,42 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Consulta de Tiempo Restante</title>
-    <!-- Importar CryptoJS para cifrado -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <!-- Font Awesome para el icono de la campana -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="scriptt.js" defer></script>
 </head>
 <body>
-    <!-- Icono de campana para notificaciones -->
-    <div id="notification-bell" class="bell">
-        <i class="fa fa-bell"></i>
-        <span id="notification-dot" class="notification-dot hidden"></span>
-    </div>
-
     <div class="container">
-        <h1>Consulta de Tiempo Restante de tu Suscripción</h1>
+        <h2>Consulta El Tiempo Restante de tu Suscripción Adquirida</h2>
         <form id="consultaForm">
-            <label for="identificador">Correo Electrónico o Número de Teléfono:</label>
+            <label for="identificador">Ingresa tu Correo Electrónico o Número de Teléfono</label>
             <input type="text" id="identificador" name="identificador" required placeholder="Introduce tu correo o número de teléfono">
             <button type="submit">Consultar</button>
         </form>
         <div id="resultado" class="mensaje"></div>
-        <a id="catalogoButton" href="https://j0rdmgl.github.io/DesinGuruShop.github.io/" class="button-link">Accede a nuestro catálogo</a>
-        <a id="whatsappButton" href="https://wa.me/51985096585?text=Necesito%20soporte%20por%20favor" target="_blank">
-            <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"/> Soporte
-        </a>
     </div>
 
-    <!-- Ventana Modal para renovación de suscripción -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
-            <p>Tu suscripción ha expirado. Fin de suscripción: <span id="fechaExpiracion"></span></p>
-            <a id="renewButton" href="https://wa.me/51922072353?text=Deseo%20renovar%20mi%20suscripción" target="_blank">
-                <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"/> RENOVAR SUSCRIPCIÓN EN WHATSAPP
-            </a>
+    <!-- Ventana Modal para detalles de la suscripción y redes sociales -->
+<div id="modal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="subscription-details">
+            <h3>Detalles de Suscripción</h3>
+            <p>Producto: <span id="producto"></span></p>
+            <p>Fecha de Inicio: <span id="fechaInicio"></span></p>
+            <p>Días del Plan: <span id="diasPlan"></span></p>
+            <p>Fecha de Expiración: <span id="fechaExpiracion"></span></p>
+            <p>Días Restantes: <span id="diasRestantes"></span></p>
+            <h5>Sigueme En Mis Redes Sociales Como:<span id="Redes Sociales"></span></h5>
+        </div>
+        <div class="social-media-links">
+            <a href="https://www.instagram.com/dani_stick_/" target="_blank"><img src="instagram.png" alt="Instagram"/></a>
+            <a href="https://www.facebook.com/profile.php?id=61556109314323" target="_blank"><img src="facebook.png" alt="Facebook"/></a>
+            <a href="https://wa.me/51985096585" target="_blank"><img src="whatsapp.png" alt="WhatsApp"/></a>
+        </div>
+        <div class="additional-actions">
+            <a href="https://j0rdmgl.github.io/DesinGuruShop.github.io/Productos/index.html" class="button">Accede a nuestro catálogo</a>
+            <a href="https://wa.me/51985096585" class="button">Soporte</a>
         </div>
     </div>
-</body>
-</html>
+</div>
