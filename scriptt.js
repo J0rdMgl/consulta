@@ -117,6 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 fechaInicio: "2024-01-1",
                 diasPlan: 2
             },
+            "970300868" : {
+                producto: "CSI ETABS",
+                fechaInicio: "2024-10-1",
+                diasPlan: 366
+            }
         };
 
         if (datosUsuario[identificador]) {
