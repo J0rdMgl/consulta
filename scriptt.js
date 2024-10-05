@@ -89,12 +89,12 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             "ronaldoayalaz12@gmail.com" : {
                 producto: "CANVA PRO EDU",
-                fechaInicio: "2024-10-05",
+                fechaInicio: "2024-10-06",
                 diasPlan: 92
             },
             "978796156" : {
                 producto: "CANVA PRO EDU",
-                fechaInicio: "2024-10-05",
+                fechaInicio: "2024-10-06",
                 diasPlan: 183
             },
             "966228431" : {

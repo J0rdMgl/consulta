@@ -68,7 +68,7 @@ button {
 
 /* Efecto hover para el botón */
 button:hover {
-    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+    background-color: #000000; /* Color más oscuro al pasar el mouse */
 }
 
 /* Estilo para la ventana modal */
